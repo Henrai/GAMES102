@@ -13,8 +13,15 @@ void CanvasSystem::OnUpdate(Ubpa::UECS::Schedule& schedule) {
 			return;
 
 		if (ImGui::Begin("Canvas")) {
+
 			ImGui::Checkbox("Enable grid", &data->opt_enable_grid);
+			ImGui::SameLine();
 			ImGui::Checkbox("Enable context menu", &data->opt_enable_context_menu);
+			ImGui::SameLine();
+			ImGui::Checkbox("Enable grid", &data->opt_enable_grid);
+			ImGui::SameLine();
+			ImGui::Checkbox("Enable context menu", &data->opt_enable_context_menu);
+
 			ImGui::Text("Mouse Left: drag to add lines,\nMouse Right: drag to scroll, click for context menu.");
 
 			// Typically you would use a BeginChild()/EndChild() pair to benefit from a clipping region + own scrolling.
